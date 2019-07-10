@@ -1,12 +1,16 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
+import NasaPictures from './components/NasaPictures/NasaPictures';
+
 import './App.css';
 
 function App() {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {});
-
-  return <div className='App' />;
+  return (
+    <div className='App'>
+      <NasaPictures />
+    </div>
+  );
 }
 
 export default App;
+
+//api_key=NcAuRZ6T19qUGwI5ckEc1VpmEybaJwbvdrsdXcp1
