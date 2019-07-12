@@ -1,6 +1,7 @@
 import React from 'react';
 import NasaPictures from './components/NasaPictures/NasaPictures';
 import 'semantic-ui-css/semantic.min.css';
+import Modal from './components/Modal/Modal';
 
 import './App.css';
 

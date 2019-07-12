@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import Loader from '../Loader/Loader';
+import Modal from '../Modal/Modal';
+import './NasaPictures.css';
 
 function NasaPictures() {
   const [photos, setPhotos] = useState([]);
@@ -8,7 +10,9 @@ function NasaPictures() {
 
   useEffect(() => {
     axios
-      .get(' https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2019-03-15')
+      .get(
+        ' https://api.nasa.gov/planetary/apod?api_key=NcAuRZ6T19qUGwI5ckEc1VpmEybaJwbvdrsdXcp1&date=2019-05-15'
+      )
       .then(res => {
         console.log('this is the data ', res);
         setPhotos(res.data);
@@ -22,10 +26,10 @@ function NasaPictures() {
   return (
     <div className='header'>
       <h1 className='heading'>Nasa Picture Of The Day</h1>
-      <h3>{photos.title}</h3>
-      {loading ? <Loader /> : <img src={photos.url} alt='pic' />}
-
-      <h3>{photos.explanation}</h3>
+      <div className='image'>{loading ? <Loader /> : <img src={photos.url} alt='pic' />}</div>
+      <div className='description'>
+        <Modal explanation={photos.explanation} />
+      </div>
     </div>
   );
 }
