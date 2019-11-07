@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+import PiList from './PiList.css';
 
 import Picture from '../Picture/Picture';
 
@@ -19,9 +20,13 @@ const PicList = () => {
   }, []);
 
   return (
-    <div className='PicList'>
-      <h1>Hello World</h1>
-      <Picture picture={pictures.url} explanation={pictures.explanation} />
+    <div className='picList'>
+      <Picture
+        picture={pictures.url}
+        explanation={pictures.explanation}
+        title={pictures.title}
+        date={pictures.date}
+      />
     </div>
   );
 };
