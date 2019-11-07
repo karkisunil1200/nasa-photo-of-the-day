@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './PictureStyle.css';
+// import './PictureStyle.css';
 
 const Picture = props => {
   return (
