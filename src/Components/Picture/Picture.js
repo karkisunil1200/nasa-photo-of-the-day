@@ -1,16 +1,17 @@
 import React from 'react';
 
 // import './PictureStyle.css';
+import {Pic, Title, Image, Para} from './PictureStyle';
 
 const Picture = props => {
   return (
     <div>
-      <h2 className='title'>{props.title}</h2>
+      <Title>{props.title}</Title>
       <h4>Date: {props.date}</h4>
-      <div className='Pic'>
-        <img src={props.picture} className='image' />
-      </div>
-      <p className='para'>{props.explanation}</p>
+      <Pic>
+        <Image src={props.picture} className='image' />
+      </Pic>
+      <Para>{props.explanation}</Para>
     </div>
   );
 };
