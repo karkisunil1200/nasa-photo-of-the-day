@@ -5,8 +5,8 @@ import './PictureStyle.css';
 const Picture = props => {
   return (
     <div>
-      <h2>{props.title}</h2>
-      <h5>Date: {props.date}</h5>
+      <h2 className='title'>{props.title}</h2>
+      <h4>Date: {props.date}</h4>
       <div className='Pic'>
         <img src={props.picture} className='image' />
       </div>

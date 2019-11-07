@@ -1,9 +1,8 @@
 .picList {
-  padding: 20px;
-  background: rgba(247, 166, 166, 0.74);
+  padding: 50px;
+  background: rgb(245, 158, 233);
 }
 .Pic {
   padding: 20px;
   background: white;
-  radius: 50%;
 }

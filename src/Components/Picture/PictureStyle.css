@@ -14,3 +14,8 @@
   text-align: justify;
   line-height: 1.5;
 }
+.title {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
